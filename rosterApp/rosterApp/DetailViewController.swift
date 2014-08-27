@@ -13,7 +13,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
-   
+    
+
    
     var imageDownloadQ = NSOperationQueue()
     @IBOutlet weak var nameField: UITextField!
@@ -53,7 +54,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             
         }
         }
-    
+    override func viewWillDisappear(animated: Bool  ) {
+        self.person.firstname = nameField.text
+        self.person.lastname = lastNameField.text
+        self.person.profilepicture = ImageView.image
+        self.person.gitHubEmail = email.text
+        self.person.gitHubUserName = username.text
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -94,7 +103,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 
-  
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        //this is where I want to archive the new object because on the main view controllers view will appear I load from the archive
+        
+        
+        
+    }
     
     /*
     // MARK: - Navigation

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3C16369719ACE52E00CFD4B0 /* personList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C16369619ACE52E00CFD4B0 /* personList.plist */; };
-		3C5C7C6019AE3BAE008E5A35 /* DetailViewController in Resources */ = {isa = PBXBuildFile; fileRef = 3C5C7C5F19AE3BAE008E5A35 /* DetailViewController */; };
 		3C82A6611996D0C7000C5041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82A6601996D0C7000C5041 /* AppDelegate.swift */; };
 		3C82A6631996D0C7000C5041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82A6621996D0C7000C5041 /* ViewController.swift */; };
 		3C82A6661996D0C7000C5041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C82A6641996D0C7000C5041 /* Main.storyboard */; };
@@ -31,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		3C16369619ACE52E00CFD4B0 /* personList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = personList.plist; sourceTree = "<group>"; };
-		3C5C7C5F19AE3BAE008E5A35 /* DetailViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DetailViewController; path = ../../../Desktop/DetailViewController; sourceTree = "<group>"; };
 		3C82A65B1996D0C7000C5041 /* rosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C82A65F1996D0C7000C5041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C82A6601996D0C7000C5041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				3C16369619ACE52E00CFD4B0 /* personList.plist */,
 				3C82A6621996D0C7000C5041 /* ViewController.swift */,
 				3CF0849E199ED196003BC180 /* DetailViewController.swift */,
-				3C5C7C5F19AE3BAE008E5A35 /* DetailViewController */,
 				3C82A6641996D0C7000C5041 /* Main.storyboard */,
 				3C82A6671996D0C7000C5041 /* Images.xcassets */,
 				3C82A65E1996D0C7000C5041 /* Supporting Files */,
@@ -208,7 +205,6 @@
 				3C16369719ACE52E00CFD4B0 /* personList.plist in Resources */,
 				3C82A6661996D0C7000C5041 /* Main.storyboard in Resources */,
 				3C82A6681996D0C7000C5041 /* Images.xcassets in Resources */,
-				3C5C7C6019AE3BAE008E5A35 /* DetailViewController in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

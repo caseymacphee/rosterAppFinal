@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.classTableView.dataSource = self
         self.classTableView.delegate = self
         
+        
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask,  true  )[0] as? String
         if let c19 = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive") as? [Person] {
             //Do this stuff
@@ -31,13 +32,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             //load from plist
             newClass()
             NSKeyedArchiver.archiveRootObject(c19, toFile:documentsPath! + "/archive")
+            NSKeyedArchiver.archiveRootObject(c19Teachers, toFile:documentsPath! + "/archive2")
+            
         //do anny additional setup
         }
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         var c19 = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive") as [Person]
+        var c19Teachers = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive2") as [Person]
+        
         
     
     }
@@ -60,8 +66,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         if newperson.lastname == "Clem" || newperson.lastname ==  "Johnson" || newperson.firstname == "Lindy"{
                             newperson.isTeacher = true
                             self.c19Teachers.append(newperson)
-                        }
+                        }else{
                             self.c19.append(newperson)
+                        }
                         
                     }
                 }
@@ -128,6 +135,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             destination.person = thisperson
         }
     }
+    
 
 }
 
