@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9776E3F6-FD89-45DB-8B62-42FCF84E49EC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rosterApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>38A19F76E05B942943DBC933B890678B41D4E18D</key>
+		<string>https://github.com/caseymacphee/rosterAppFinal.git</string>
+		<key>E0D44C1164F85CDF1DC467BF4C71686D11D75C61</key>
+		<string>https://github.com/caseymacphee/C19-2014-HW-2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>rosterApp/rosterApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>38A19F76E05B942943DBC933B890678B41D4E18D</key>
+		<string>../../..</string>
+		<key>E0D44C1164F85CDF1DC467BF4C71686D11D75C61</key>
+		<string>../../../../C19-2014-HW-2</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/caseymacphee/rosterAppFinal.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>38A19F76E05B942943DBC933B890678B41D4E18D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E0D44C1164F85CDF1DC467BF4C71686D11D75C61</string>
+			<key>IDESourceControlWCCName</key>
+			<string>C19-2014-HW-2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38A19F76E05B942943DBC933B890678B41D4E18D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rosterAppFinal</string>
+		</dict>
+	</array>
+</dict>
+</plist>
