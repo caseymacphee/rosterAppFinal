@@ -92,10 +92,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yo0-3N-L0G">
+                                <rect key="frame" x="67" y="197" width="192" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.91548094204217101" green="1" blue="0.46447747110858062" alpha="0.39000000000000001" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.78057696794314568" green="1" blue="0.68811061322213418" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mmc-KS-2CN"/>
+                    <navigationItem key="navigationItem" id="Mmc-KS-2CN">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save New" style="plain" id="KxC-75-YRY">
+                            <connections>
+                                <action selector="save:" destination="q1q-Kz-XGF" id="Baa-oL-E4k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ImageView" destination="hHq-rO-9Lo" id="GmB-Sf-FvH"/>
                         <outlet property="detailImage" destination="hHq-rO-9Lo" id="Bjg-lA-LfT"/>

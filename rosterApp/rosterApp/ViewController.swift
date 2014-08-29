@@ -22,59 +22,75 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.classTableView.delegate = self
         
         
+        
+       // newClass()
+       // teachersArrayFromPlist()
+        
+    
+        
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask,  true  )[0] as? String
-        if let c19 = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive") as? [Person] {
+        
+        if let c19 = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive03") as? [Person] {
             //Do this stuff
-            var that = "hello"
-            
-            
+            let c19Teachers = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive04") as? [Person]
         }else{
-            //load from plist
-            newClass()
-            NSKeyedArchiver.archiveRootObject(c19, toFile:documentsPath! + "/archive")
-            NSKeyedArchiver.archiveRootObject(c19Teachers, toFile:documentsPath! + "/archive2")
+                //load from plist
+                newClass()
             
-        //do anny additional setup
+            
+                NSKeyedArchiver.archiveRootObject(c19, toFile:documentsPath! + "/archive03")
+                NSKeyedArchiver.archiveRootObject(c19Teachers, toFile:documentsPath! + "/archive04")
+            
+                //do anny additional setup
         }
+    
     }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        var c19 = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive") as [Person]
-        var c19Teachers = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive2") as [Person]
         
+        NSKeyedArchiver.archiveRootObject(c19, toFile:documentsPath + "/archive03")
+        NSKeyedArchiver.archiveRootObject(c19Teachers, toFile:documentsPath + "/archive04")
         
-    
+        classTableView.reloadData()
+        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func newClass(){
-        var pathToTargetPlist = NSBundle.mainBundle().pathForResource("personList", ofType: "plist")
-        var personFromPlist = NSArray(contentsOfFile: "pathToTargetPlist")
         
-        for i in personFromPlist {
-            if let person = i as? Dictionary<String, String>{
-                if let firstN = person["firstName"] as String!{
-                    if let lastN = person["lastName"] as String!{
-                        let newperson = Person(firstname: firstN, lastname: lastN)
-                        //newperson.profilepicture = UIImage(named: "stockProfileImage")
-                            println(newperson)
-                        if newperson.lastname == "Clem" || newperson.lastname ==  "Johnson" || newperson.firstname == "Lindy"{
-                            newperson.isTeacher = true
-                            self.c19Teachers.append(newperson)
-                        }else{
-                            self.c19.append(newperson)
-                        }
+        var pathToTargetPlist = NSBundle.mainBundle().pathForResource("personList", ofType: "plist")
+        var personFromPlist = NSArray(contentsOfFile: pathToTargetPlist)
+        
+        for anyPerson in personFromPlist{
+            
+            if let person = anyPerson as? Dictionary<String, String>{
+                if let firstKey = person["firstName"] as String!{
+                    if let lastKey = person["lastName"] as String!{
                         
+                        let personInClassRoster = Person(firstname: firstKey, lastname: lastKey)
+                        
+                        if personInClassRoster.lastname == "Clem" || personInClassRoster.lastname ==  "Johnson" || personInClassRoster.firstname == "Lindy"{
+                            
+                            c19Teachers.append(personInClassRoster)
+                            
+                        }else{
+
+                            c19.append(personInClassRoster)
+                            
+                        }
                     }
                 }
             }
         }
     }
+    
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 2
@@ -89,10 +105,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
-        if section == 0{
-            return 2
-        }else{
-            return (c19.count - 2)
+        switch section {
+        case 0:
+            return self.c19Teachers.count
+        default:
+            return self.c19.count
         }
     }
     
@@ -109,34 +126,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             //configure it for the row
             var personForRow = self.c19[indexPath.row]
             cell.textLabel.text = personForRow.fullName()
-        
        }
         //return the cell
+        
+        
+
         return cell
     }
-    
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         println(indexPath.section)
     }
      override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-       let destination = segue.destinationViewController as DetailViewController
+        
+        let destination = segue.destinationViewController as DetailViewController
+            destination.theteachers = c19Teachers
+            destination.theclass = c19
         if segue.identifier == "PersonIdentifier" {
             if classTableView.indexPathForSelectedRow().section == 0{
-                let thisperson = c19Teachers[classTableView.indexPathForSelectedRow().row]
-                destination.person = thisperson
+                destination.teacher = true
+                destination.person =  c19Teachers[classTableView.indexPathForSelectedRow().row]
             }else{
                 destination.person = c19[classTableView.indexPathForSelectedRow().row]
             }
         }
         if segue.identifier == "addPerson" {
-            
-        let thisperson = Person(firstname: "", lastname: "")
-            destination.person = thisperson
+            destination.newPerson = true
+            let thisperson = Person(firstname: "", lastname: "")
+                destination.person = thisperson
         }
     }
-    
-
 }
 
 

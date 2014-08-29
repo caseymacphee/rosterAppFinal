@@ -13,19 +13,30 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
-    
-
    
     var imageDownloadQ = NSOperationQueue()
+   
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var ImageView: UIImageView!
-    
+    var newPerson : Bool = false
+    var teacher : Bool = false
     
     var person: Person!
- 
+    var theclass = [Person]()
+    var theteachers = [Person]()
+    
+    @IBAction func save(sender: AnyObject) {
+        if teacher == false{
+            theclass.append(person)
+            
+        }else{
+            theteachers.append(person)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.imageDownloadQ.qualityOfService = NSQualityOfService.UserInitiated
 
         nameField.text = self.person.firstname
@@ -51,7 +62,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.imageDownloadQ.addOperation(downloadOperation)
         }else{
             //work with github api
-            
+            //https://api.github.com/users/\(the string)
+
         }
         }
     override func viewWillDisappear(animated: Bool  ) {
@@ -89,15 +101,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
     }
     func textFieldDidEndEditing(textField: UITextField!) {
-        if textField == nameField {
-            self.person.firstname = textField.text
-        }
-        if textField == lastNameField{
-            self.person.lastname = textField.text
-        }
-        
-        
-    }
+            }
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
         //this gets fired when the users cancel out of the process
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -109,6 +113,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         
     }
+    
     
     /*
     // MARK: - Navigation

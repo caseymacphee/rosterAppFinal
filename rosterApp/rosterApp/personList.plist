@@ -1,195 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>New item</key>
+<array>
 	<dict>
 		<key>firstName</key>
 		<string>Nate</string>
 		<key>lastName</key>
 		<string>Birkholz</string>
 	</dict>
-	<key>New item - 2</key>
 	<dict>
 		<key>firstName</key>
 		<string>Matthew</string>
 		<key>lastName</key>
 		<string>Brightbill</string>
 	</dict>
-	<key>New item - 3</key>
 	<dict>
 		<key>firstName</key>
 		<string>Jeff</string>
 		<key>lastName</key>
 		<string>Chavez</string>
 	</dict>
-	<key>New item - 4</key>
 	<dict>
 		<key>firstName</key>
 		<string>John</string>
 		<key>lastName</key>
 		<string>Clem</string>
 	</dict>
-	<key>New item - 5</key>
 	<dict>
 		<key>firstName</key>
 		<string>Christie</string>
 		<key>lastName</key>
 		<string>Federer</string>
 	</dict>
-	<key>New item - 6</key>
 	<dict>
 		<key>firstName</key>
 		<string>David</string>
 		<key>lastName</key>
 		<string>Fry</string>
 	</dict>
-	<key>New item - 7</key>
 	<dict>
 		<key>firstName</key>
 		<string>Adrian</string>
 		<key>lastName</key>
 		<string>Petrica Gherle</string>
 	</dict>
-	<key>New item - 8</key>
 	<dict>
 		<key>firstName</key>
 		<string>Jake</string>
 		<key>lastName</key>
 		<string>Hawken</string>
 	</dict>
-	<key>New item - 9</key>
 	<dict>
 		<key>firstName</key>
 		<string>Brad</string>
 		<key>lastName</key>
 		<string>Johnson</string>
 	</dict>
-	<key>New item - 10</key>
 	<dict>
 		<key>firstName</key>
 		<string>Shams</string>
 		<key>lastName</key>
 		<string>Kazi</string>
 	</dict>
-	<key>New item - 11</key>
 	<dict>
 		<key>firstName</key>
 		<string>Cameron</string>
 		<key>lastName</key>
 		<string>Klein</string>
 	</dict>
-	<key>New item - 12</key>
 	<dict>
 		<key>firstName</key>
 		<string>Kori</string>
 		<key>lastName</key>
 		<string>Kolodziejczak</string>
 	</dict>
-	<key>New item - 13</key>
 	<dict>
 		<key>firstName</key>
 		<string>Parker</string>
 		<key>lastName</key>
 		<string>Lewis</string>
 	</dict>
-	<key>New item - 14</key>
 	<dict>
 		<key>firstName</key>
 		<string>Lindy</string>
 		<key>lastName</key>
 		<string>lindy@codefellows.com</string>
 	</dict>
-	<key>New item - 15</key>
 	<dict>
 		<key>firstName</key>
 		<string>Nathan</string>
 		<key>lastName</key>
 		<string>Ma</string>
 	</dict>
-	<key>New item - 16</key>
 	<dict>
 		<key>firstName</key>
 		<string>Casey</string>
 		<key>lastName</key>
 		<string>MacPhee</string>
 	</dict>
-	<key>New item - 17</key>
 	<dict>
 		<key>firstName</key>
 		<string>Brendan</string>
 		<key>lastName</key>
 		<string>McAleer</string>
 	</dict>
-	<key>New item - 18</key>
 	<dict>
 		<key>firstName</key>
 		<string>Brian</string>
 		<key>lastName</key>
 		<string>Mendez</string>
 	</dict>
-	<key>New item - 19</key>
 	<dict>
 		<key>firstName</key>
 		<string>Mark</string>
 		<key>lastName</key>
 		<string>Morris</string>
 	</dict>
-	<key>New item - 20</key>
 	<dict>
 		<key>firstName</key>
 		<string>Rowan</string>
 		<key>lastName</key>
 		<string>North</string>
 	</dict>
-	<key>New item - 21</key>
 	<dict>
 		<key>firstName</key>
 		<string>Kevin</string>
 		<key>lastName</key>
 		<string>Pham</string>
 	</dict>
-	<key>New item - 22</key>
 	<dict>
 		<key>firstName</key>
 		<string>Will</string>
 		<key>lastName</key>
 		<string>Richman</string>
 	</dict>
-	<key>New item - 23</key>
 	<dict>
 		<key>firstName</key>
 		<string>Heather</string>
 		<key>lastName</key>
 		<string>Thueringer</string>
 	</dict>
-	<key>New item - 24</key>
 	<dict>
 		<key>firstName</key>
 		<string>Tuan</string>
 		<key>lastName</key>
 		<string>Vu</string>
 	</dict>
-	<key>New item - 25</key>
 	<dict>
 		<key>firstName</key>
 		<string>Zack</string>
 		<key>lastName</key>
 		<string>Walkingstick</string>
 	</dict>
-	<key>New item - 26</key>
 	<dict>
 		<key>firstName</key>
 		<string>Sara</string>
 		<key>lastName</key>
 		<string>Wong</string>
 	</dict>
-	<key>New item - 27</key>
 	<dict>
 		<key>firstName</key>
 		<string>Hongyao</string>
 		<key>lastName</key>
 		<string>Zhang</string>
 	</dict>
-</dict>
+</array>
 </plist>
