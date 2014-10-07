@@ -101,6 +101,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
     }
     func textFieldDidEndEditing(textField: UITextField!) {
+        
             }
     func imagePickerControllerDidCancel(picker: UIImagePickerController!) {
         //this gets fired when the users cancel out of the process

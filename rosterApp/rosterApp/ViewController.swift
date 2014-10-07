@@ -30,9 +30,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask,  true  )[0] as? String
         
-        if let c19 = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive03") as? [Person] {
+        if let students = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive03") as? [Person] {
+            self.c19 = students
             //Do this stuff
-            let c19Teachers = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive04") as? [Person]
+            if let teachers = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath! + "/archive04") as?[Person]{
+            self.c19Teachers = teachers
+            }
         }else{
                 //load from plist
                 newClass()

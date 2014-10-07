@@ -30,7 +30,7 @@ class Person : NSObject, NSCoding{
     }
     
     required init(coder aDecoder: NSCoder!){
-        self.firstname = aDecoder.decodeObjectForKey("firstname") as String
+        self.firstname = aDecoder.decodeObjectForKey("firstName") as String
         self.lastname = aDecoder.decodeObjectForKey("lastname") as String
         self.isTeacher = aDecoder.decodeObjectForKey("isTeacher") as? Bool
         self.profilepicture = aDecoder.decodeObjectForKey("profilepicture") as? UIImage
